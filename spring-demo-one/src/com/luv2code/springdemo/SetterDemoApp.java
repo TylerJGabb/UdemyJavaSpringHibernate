@@ -10,7 +10,7 @@ public class SetterDemoApp {
 			TennisCoach tennisCoach = ctx.getBean("myTennisCoach", TennisCoach.class);
 			System.out.println(tennisCoach.getDailyWorkout());
 			System.out.println(tennisCoach.getFortune());
-			System.out.println(tennisCoach.getEmail());
+			System.out.println("Tennis coach email=" + tennisCoach.getEmail());
 		}
 		
 

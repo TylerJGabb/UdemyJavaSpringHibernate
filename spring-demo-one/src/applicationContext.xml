@@ -6,6 +6,9 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <!-- Import properties file -->
+    <context:property-placeholder location="classpath:project.properties"/>
 
     <!-- Define your beans here -->
     <!--  define the dependency on FortuneService -->
@@ -32,9 +35,11 @@
     	-->
     	<property name="fortuneService" ref="myFortune"/>
     	
-    	<!-- Set a property to a literal value -->
-    	<property name="email" value="tennisCoach@foo.bar"/>
+    	<!-- Set a property to a literal value from project.properties -->
+    	<property name="email" value="${tennis.coach.email}"/>
     </bean>
+    
+    
 </beans>
 
 
