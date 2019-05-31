@@ -21,5 +21,13 @@ public class TrackCoach implements Coach {
 	public String getFortune() {
 		return "Just Do It! " + oFortuneService.getFortune();
 	}
+	
+	private void onBeanInitialization() {
+		System.out.println("TrackCoach: onBeanInitialization");
+	}
+	
+	private void onBeanDestroying() {
+		System.out.println("TrackCoach: onBeanDestroying");
+	}
 
 }
