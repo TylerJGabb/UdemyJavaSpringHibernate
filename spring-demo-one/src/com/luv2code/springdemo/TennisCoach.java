@@ -3,7 +3,16 @@ package com.luv2code.springdemo;
 public class TennisCoach implements Coach {
 
 	private FortuneService oFortuneService;
+	private String oEmail;
 	
+	public String getEmail() {
+		return oEmail;
+	}
+
+	public void setEmail(String oEmail) {
+		this.oEmail = oEmail;
+	}
+
 	public void setFortuneService(FortuneService aFortuneService) {
 		System.out.println("TennisCoach says: My oFortuneService was set!");
 		oFortuneService = aFortuneService;
