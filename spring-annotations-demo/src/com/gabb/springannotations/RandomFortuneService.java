@@ -9,10 +9,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class RandomFortuneService implements FortuneService {
 
-	private List<String> oFortunes = 
-			Arrays.asList("Yes", "No", "Maybe", "Try Again", "Not Likely");
+	private List<String> oFortunes;
+	private Random oRando;
 	
-	private Random oRando = new Random();
+	public RandomFortuneService() {
+		System.out.println("Inside RandoFortServ ctor");
+		oFortunes = Arrays.asList("Yes", "No", "Maybe", "Try Again", "Not Likely");
+		oRando = new Random();
+	}
 	
 	@Override
 	public String getFortune() {
