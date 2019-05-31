@@ -2,7 +2,7 @@ package com.luv2code.springdemo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class HelloSpringApp {
+public class ConstructorDemoApp {
 
 	public static void main(String[] args) {
 
@@ -19,7 +19,6 @@ public class HelloSpringApp {
 		System.out.println(theCoach.getFortune()); 
 		//the FortuneService was injected to the Coach by IOC on construction
 
-		// close the configuration context
 		context.close();
 
 	}

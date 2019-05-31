@@ -19,6 +19,19 @@
     	<constructor-arg ref="myFortune" name="aFortuneService"/>
     </bean>
     
+    <!--
+    I noticed the setter method of the TennisCoach being called when getting the 
+    application context. Adding lazy-init="true" stop it from happening until the object is actually needed
+    -->
+    <bean id="myTennisCoach" class="com.luv2code.springdemo.TennisCoach" lazy-init="true">
+    
+    	<!-- 
+    	Setup the setter injection
+    	The Case here is important, the actual property name does not matter, its the setter name
+    	A setter with the signature setSomeProperty(...) needs name="someProperty" 
+    	-->
+    	<property name="fortuneService" ref="myFortune"/>
+    </bean>
 </beans>
 
 
