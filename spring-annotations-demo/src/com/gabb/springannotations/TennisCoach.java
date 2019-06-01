@@ -22,7 +22,8 @@ public class TennisCoach implements Coach {
 	
 	@Autowired
 	public TennisCoach(@Qualifier("randomFortuneService") FortuneService aFortuneService) {
-		System.out.println("Inside tennisCoach constructor with aFortuneService="+ aFortuneService);
+		System.out.println("Inside tennisCoach ctor");
+		System.out.println("\taFortuneService="+ aFortuneService);
 		oFortuneService = aFortuneService;
 	}
 	
