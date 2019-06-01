@@ -1,14 +1,15 @@
 package com.gabb.springannotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component //we are now using the default beanId assigned by Spring
-//bean id is `tennisCoach`
+import com.gabb.springannotations.fortuneservices.FortuneService;
+
+@Component
 public class TennisCoachFieldInjection implements Coach {
 	
-	@Autowired
+	@Autowired @Qualifier("randomFortuneService")
 	private FortuneService oFortuneService;
 	
 	@Override

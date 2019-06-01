@@ -1,4 +1,4 @@
-package com.gabb.springannotations;
+package com.gabb.springannotations.fortuneservices;
 
 public interface FortuneService {
 
