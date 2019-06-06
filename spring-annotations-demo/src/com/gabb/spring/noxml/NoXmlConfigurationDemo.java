@@ -11,9 +11,12 @@ public class NoXmlConfigurationDemo {
 	public static void main(String[] args) {
 		try(AnnotationConfigApplicationContext ctx =
 				new AnnotationConfigApplicationContext(AppConfig.class)){
-			Coach coach = ctx.getBean("randoCoach", Coach.class);
-			System.out.println(coach.getDailyWorkout());
-			System.out.println(coach.getDailyFortune());
+			//note that can can do either of the following to get the randocoach
+			//after specifying the @Bean 
+			RandoCoach rcoach = ctx.getBean(RandoCoach.class);
+			System.out.println(rcoach.getDailyWorkout());
+			System.out.println(rcoach.getDailyFortune());
+			System.out.println(rcoach.getEmail());
 			
 			
 		}
